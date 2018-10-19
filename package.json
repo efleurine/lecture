@@ -8,8 +8,10 @@
     "reload": "sh ./reload.sh"
   },
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "16.5.0",
     "react-native": "0.57.2",
+    "react-native-fbsdk": "^0.8.0",
     "react-navigation": "^2.18.0"
   },
   "devDependencies": {

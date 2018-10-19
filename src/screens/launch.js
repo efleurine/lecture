@@ -3,6 +3,7 @@ import { View } from "react-native";
 
 import Placeholder from "../components/placeholder";
 import Text from "../components/text";
+import FBLogin from '../components/fblogin'
 
 export default class LaunchScreen extends React.Component {
   static navigationOptions = {
@@ -33,6 +34,7 @@ export default class LaunchScreen extends React.Component {
           <Text text="Une jeune qui pense" />
         </View>
         <Text onPress={this.skip} text="Skip" />
+        <FBLogin />
       </View>
     );
   }
