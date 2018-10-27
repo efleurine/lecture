@@ -3,7 +3,7 @@ import { View } from "react-native";
 
 import Placeholder from "../components/placeholder";
 import Text from "../components/text";
-import FBLogin from '../components/fblogin'
+import FBLogin from "../components/fblogin";
 
 export default class LaunchScreen extends React.Component {
   static navigationOptions = {
@@ -24,6 +24,16 @@ export default class LaunchScreen extends React.Component {
     console.log("user wants to skip");
     this.props.navigation.navigate("MainStack");
   };
+
+  onFBLoginFinished(result) {
+    console.log('the login was completed')
+    console.log(result);
+  }
+
+  onFBLogoutFinished(result) {
+    console.log(result);
+  }
+
   render() {
     return (
       <View>
@@ -34,7 +44,10 @@ export default class LaunchScreen extends React.Component {
           <Text text="Une jeune qui pense" />
         </View>
         <Text onPress={this.skip} text="Skip" />
-        <FBLogin />
+        <FBLogin
+          onLoginFinished={this.onFBLoginFinished.bind(this)}
+          onLogoutFinished={this.onFBLogoutFinished.bind(this)}
+        />
       </View>
     );
   }
