@@ -1,15 +1,19 @@
 import { createSwitchNavigator } from "react-navigation";
 
-import LaunchStack from "./launch";
-import MainStack from "./main";
+import launch from "./launch";
+import main from "./main";
+import intro from "./intro";
+// import test from "../../archive/test";
 
 const switchNavigator = createSwitchNavigator(
   {
-    LaunchStack,
-    MainStack
+    launch,
+    main,
+    intro
+    // test
   },
   {
-    initialRouteName: "LaunchStack"
+    initialRouteName: "main"
   }
 );
 

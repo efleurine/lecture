@@ -5,6 +5,8 @@ import Placeholder from "../components/placeholder";
 import Text from "../components/text";
 import FBLogin from "../components/fblogin";
 
+import * as test from "../lib/fbservice";
+
 export default class LaunchScreen extends React.Component {
   static navigationOptions = {
     title: "Launch",
@@ -18,6 +20,8 @@ export default class LaunchScreen extends React.Component {
   };
   componentDidMount() {
     console.log("component is mounted");
+    // test.isUserConnected();
+    // test.shareLinkWithShareDialog();
   }
 
   skip = () => {
@@ -26,7 +30,7 @@ export default class LaunchScreen extends React.Component {
   };
 
   onFBLoginFinished(result) {
-    console.log('the login was completed')
+    console.log("the login was completed");
     console.log(result);
   }
 

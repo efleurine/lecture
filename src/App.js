@@ -3,20 +3,18 @@
  */
 import React from "react";
 import { UIManager } from "react-native";
-// import { Provider as PaperProvider } from "react-native-paper";
+import { Provider as PaperProvider } from "react-native-paper";
 
 import RootContainer from "./RootContainer";
 
 UIManager.setLayoutAnimationEnabledExperimental && //eslint-disable-line
   UIManager.setLayoutAnimationEnabledExperimental(true);
 
-// const App = () => (
-//   <PaperProvider>
-//     <RootContainer />
-//   </PaperProvider>
-// );
-
-const App = () => <RootContainer />
+const App = () => (
+  <PaperProvider>
+    <RootContainer />
+  </PaperProvider>
+);
 
 console.ignoredYellowBox = ["Warning: isMounted(...)"];
 export default App;
