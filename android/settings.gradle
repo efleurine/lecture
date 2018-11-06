@@ -1,4 +1,4 @@
-rootProject.name = 'lecture'
+rootProject.name = 'avecunlivre'
 include ':react-native-fbsdk'
 project(':react-native-fbsdk').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fbsdk/android')
 include ':appcenter-crashes'

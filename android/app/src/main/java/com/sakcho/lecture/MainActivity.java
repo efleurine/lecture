@@ -1,4 +1,4 @@
-package com.lecture;
+package com.sakcho.lecture;
 
 import com.facebook.react.ReactActivity;
 
@@ -12,7 +12,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "lecture";
+        return "avecunlivre";
     }
 
     @Override

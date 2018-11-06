@@ -1,4 +1,4 @@
-package com.lecture;
+package com.sakcho.lecture;
 
 import android.app.Application;
 
