@@ -58,3 +58,5 @@ buck-out/
 .vscode/.react/
 
 archive
+
+local.properties
