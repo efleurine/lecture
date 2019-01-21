@@ -60,3 +60,5 @@ buck-out/
 archive
 
 local.properties
+
+.repo/
