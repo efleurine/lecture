@@ -25,6 +25,15 @@ import com.oblador.vectoricons.VectorIconsPackage;
 
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 
+import com.github.amarcruz.rntextsize.RNTextSizePackage;
+
+// import com.cmcewen.blurview.BlurViewPackage;
+import com.wix.interactable.Interactable;
+
+import com.wix.reactnativeuilib.highlighterview.HighlighterViewPackage;
+import com.wix.reactnativeuilib.textinput.TextInputDelKeyHandlerPackage;
+import com.wix.reactnativeuilib.wheelpicker.WheelPickerPackage;
+
 public class MainApplication extends Application implements ReactApplication {
   private static CallbackManager mCallbackManager = CallbackManager.Factory.create();
 
@@ -40,14 +49,14 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-            new RNGestureHandlerPackage(),
-            new AppCenterReactNativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
-            new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
-            new AppCenterReactNativePackage(MainApplication.this),
-            new FBSDKPackage(mCallbackManager),new VectorIconsPackage(),new SplashScreenReactPackage()
-      );
+      return Arrays.<ReactPackage>asList(new MainReactPackage(), new RNGestureHandlerPackage(),
+          new AppCenterReactNativeCrashesPackage(MainApplication.this,
+              getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
+          new AppCenterReactNativeAnalyticsPackage(MainApplication.this,
+              getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
+          new AppCenterReactNativePackage(MainApplication.this), new FBSDKPackage(mCallbackManager),
+          new VectorIconsPackage(), new SplashScreenReactPackage(), new TextInputDelKeyHandlerPackage(),
+          new HighlighterViewPackage(), new WheelPickerPackage(), new Interactable(), new RNTextSizePackage());
     }
 
     @Override
