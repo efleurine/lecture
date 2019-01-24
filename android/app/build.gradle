@@ -192,6 +192,8 @@ dependencies {
     implementation project(':react-native-ui-lib')
     implementation project(':react-native-text-size')
 
+    implementation project(':react-native-languages')
+
 }
 
 // Run this once to be able to run the application with BUCK

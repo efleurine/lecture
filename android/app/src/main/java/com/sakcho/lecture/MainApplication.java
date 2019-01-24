@@ -34,6 +34,8 @@ import com.wix.reactnativeuilib.highlighterview.HighlighterViewPackage;
 import com.wix.reactnativeuilib.textinput.TextInputDelKeyHandlerPackage;
 import com.wix.reactnativeuilib.wheelpicker.WheelPickerPackage;
 
+import com.reactcommunity.rnlanguages.RNLanguagesPackage;
+
 public class MainApplication extends Application implements ReactApplication {
   private static CallbackManager mCallbackManager = CallbackManager.Factory.create();
 
@@ -56,7 +58,8 @@ public class MainApplication extends Application implements ReactApplication {
               getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
           new AppCenterReactNativePackage(MainApplication.this), new FBSDKPackage(mCallbackManager),
           new VectorIconsPackage(), new SplashScreenReactPackage(), new TextInputDelKeyHandlerPackage(),
-          new HighlighterViewPackage(), new WheelPickerPackage(), new Interactable(), new RNTextSizePackage());
+          new HighlighterViewPackage(), new WheelPickerPackage(), new Interactable(), new RNTextSizePackage(),
+          new RNLanguagesPackage());
     }
 
     @Override
