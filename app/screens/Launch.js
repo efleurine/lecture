@@ -6,7 +6,7 @@ import { routeNames } from "../routes";
 
 export default class Launch extends React.Component {
   static navigationOptions = {
-    title: "Launch Screen"
+    headerMode: "none"
   };
 
   constructor(props) {

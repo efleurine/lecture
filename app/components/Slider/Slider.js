@@ -77,7 +77,7 @@ export default class AppIntroSlider extends React.Component {
       (Platform.OS === "ios" ? 20 : StatusBar.currentHeight);
     const props = { ...item.item, bottomSpacer, topSpacer, width, height };
 
-    return this.props.renderItem ? (
+    return item.item.useRenderer ? (
       this.props.renderItem(props)
     ) : (
       <DefaultSlide {...props} />

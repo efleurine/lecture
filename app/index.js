@@ -2,7 +2,7 @@ import React from "react";
 import { UIManager } from "react-native";
 
 import RootContainer from "./RootContainer";
-import "./config/setupTheme";
+// import "./config/setupTheme";
 
 UIManager.setLayoutAnimationEnabledExperimental && //eslint-disable-line
   UIManager.setLayoutAnimationEnabledExperimental(true);

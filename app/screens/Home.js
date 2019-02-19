@@ -14,6 +14,8 @@ import Watermark from "../components/Message/Watermark";
 
 import i18n from "../translations/i18n";
 
+import { MainContainer } from "../components/atom";
+
 const FirstReadingInvitation = () => (
   <View flexG center>
     <Watermark text="No reading yet" />
@@ -30,6 +32,7 @@ export default class Home extends React.PureComponent {
       margin: 0,
       elevation: 0
     }
+
     // headerRight: (
     //   <Button
     //     onPress={() => alert("This is a button!")}
@@ -57,8 +60,10 @@ export default class Home extends React.PureComponent {
   render() {
     return (
       <View flex>
-        <Text grayOut>Welcome to your home screen</Text>
-        <Text>{i18n.t("current", { language: i18n.currentLocale() })}</Text>
+        {/* <MainContainer>
+          <Text grayOut>Welcome to your home screen</Text>
+          <Text>{i18n.t("current", { language: i18n.currentLocale() })}</Text>
+        </MainContainer> */}
         <View>
           <Text onPress={this.fr}>Vers le français</Text>
         </View>

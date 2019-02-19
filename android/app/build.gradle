@@ -79,7 +79,7 @@ project.ext.react = [
 apply from: "../../node_modules/react-native/react.gradle"
 
 project.ext.vectoricons = [
-    iconFontNames: [ 'MaterialIcons.ttf','FontAwesome.ttf'] // Name of the font files you want to copy
+    iconFontNames: [ 'MaterialIcons.ttf','FontAwesome.ttf','SimpleLineIcons.ttf'] // Name of the font files you want to copy
 ]
 
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
@@ -166,7 +166,11 @@ configurations.all {
         if (requested.group == 'com.android.support' && requested.name != 'multidex') {
             details.useVersion "${rootProject.ext.supportLibVersion}"
         }
+        if (details.requested.name == 'android-jsc') {
+            details.useTarget group: details.requested.group, name: 'android-jsc', version: 'r236355'
+        }
     }
+    
 }
 
 dependencies {

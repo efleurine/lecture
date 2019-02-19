@@ -11,13 +11,9 @@ import { routeNames } from "../routes";
 import Intro from "../components/Onboarding/Intro";
 
 export default class Onboarding extends React.Component {
-  static navigationOptions = {
-    title: "Welcome !"
-  };
-
   _checkIn = async () => {
     try {
-      await AsyncStorage.setItem(appKey, "true");
+      await AsyncStorage.setItem(appKey, "en"); // we set the language
       console.log("we set first time");
     } catch (error) {
       // Error saving data - would need to log this to see if it happens.

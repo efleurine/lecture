@@ -1,10 +1,8 @@
-import React from "react";
 import {
   createAppContainer,
   createStackNavigator,
   createSwitchNavigator
 } from "react-navigation";
-// import { withNamespaces } from "react-i18next";
 
 import PlaceholderScreen from "../screens/Placeholder";
 import LaunchScreen from "../screens/Launch";
@@ -30,9 +28,14 @@ const AppStack = createStackNavigator(
   }
 );
 
-const AuthStack = createStackNavigator({
-  [routeNames.Onboarding]: { screen: OnboardingScreen }
-});
+const AuthStack = createStackNavigator(
+  {
+    [routeNames.Onboarding]: { screen: OnboardingScreen }
+  },
+  {
+    headerMode: "none"
+  }
+);
 
 const MainNavigator = createSwitchNavigator(
   {
@@ -41,31 +44,8 @@ const MainNavigator = createSwitchNavigator(
     [routeNames.AuthStack]: AuthStack
   },
   {
-    initialRouteName: routeNames.Launch
+    initialRouteName: routeNames.AuthStack
   }
 );
-
-// Wrapping a stack with translation hoc asserts we get new render on language change
-// the hoc is set to only trigger rerender on languageChanged
-// class WrappedStack extends React.Component {
-//   static router = MainNavigator.router;
-//   render() {
-//     const { t } = this.props;
-//     return <MainNavigator screenProps={{ t }} {...this.props} />;
-//   }
-// }
-// const ReloadAppOnLanguageChange = withNamespaces("common", {
-//   bindI18n: "languageChanged",
-//   bindStore: false
-// })(createAppContainer(WrappedStack));
-
-// The entry point using a react navigation stack navigation
-// gets wrapped by the I18nextProvider enabling using translations
-// https://github.com/i18next/react-i18next#i18nextprovider
-// export class AppContainer extends React.PureComponent {
-//   render() {
-//     return <ReloadAppOnLanguageChange />;
-//   }
-// }
 
 export default createAppContainer(MainNavigator);

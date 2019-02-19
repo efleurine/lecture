@@ -1,10 +1,17 @@
 import React from "react";
 import { View, Text } from "react-native";
+import SplashScreen from "react-native-splash-screen";
+import i18n from "../translations/i18n";
 
 export default class Placeholder extends React.Component {
   static navigationOptions = {
     title: "Placeholder!"
   };
+
+  componentDidMount() {
+    SplashScreen.hide();
+    console.log(i18n);
+  }
 
   render() {
     return (

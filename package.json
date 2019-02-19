@@ -8,7 +8,10 @@
     "reload": "sh ./reload.sh",
     "open": "sh ./open.sh",
     "ios": "react-native run-ios",
-    "android": "cd android && ./gradlew clean && cd .. && react-native run-android"
+    "android": "cd android && ./gradlew clean && cd .. && react-native run-android",
+    "install": "react-native run-android",
+    "installRelease": "react-native run-android --variant=release",
+    "cleanDev": "watchman watch-del-all && adb uninstall com.sakcho.lecture"
   },
   "dependencies": {
     "@callstack/react-theme-provider": "^1.0.6",
@@ -16,6 +19,7 @@
     "appcenter-analytics": "^1.9.0",
     "appcenter-crashes": "^1.9.0",
     "i18n-js": "^3.2.1",
+    "jsc-android": "^236355.1.1",
     "mobx": "^5.5.2",
     "mobx-react": "^5.3.6",
     "prop-types": "^15.6.2",
@@ -30,7 +34,8 @@
     "react-native-text-size": "^3.0.0",
     "react-native-ui-lib": "^3.15.5",
     "react-native-vector-icons": "^6.0.2",
-    "react-navigation": "^3.0.9"
+    "react-navigation": "^3.0.9",
+    "react-navigation-fluid-transitions": "^0.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -55,7 +60,9 @@
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.51.1",
     "prettier": "1.15.3",
-    "react-test-renderer": "16.6.3"
+    "react-native-slowlog": "^1.0.2",
+    "react-test-renderer": "16.6.3",
+    "rn-snoopy": "^2.0.2"
   },
   "jest": {
     "preset": "react-native"
