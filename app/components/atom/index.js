@@ -1,5 +1,4 @@
 import MainContainer from "./MainContainer";
+import ButtonComponent from "./ButtonComponent";
 
-export default {
-  MainContainer
-};
+export { MainContainer, ButtonComponent };

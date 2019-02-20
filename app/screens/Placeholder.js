@@ -10,7 +10,6 @@ export default class Placeholder extends React.Component {
 
   componentDidMount() {
     SplashScreen.hide();
-    console.log(i18n);
   }
 
   render() {

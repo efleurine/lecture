@@ -4,7 +4,7 @@ import { AnimatableManager } from "react-native-ui-lib";
 import * as Animatable from "react-native-animatable";
 // import RNLanguages from "react-native-languages"; // will allow to know when the user change the languages
 
-import AppContainer from "./routes";
+import { Router } from "./routes";
 
 // IMPORTANT! Make uilib's animations available globally for the app's use (option to pass adittional animation definitions)
 Animatable.initializeRegistryWithDefinitions(
@@ -22,8 +22,8 @@ export default class RootContainer extends React.Component {
 
   componentDidMount() {
     // RNLanguages.addEventListener("change", this._onLanguagesChange);
-    console.log(Animatable);
-    console.log(AnimatableManager);
+    // console.log(Animatable);
+    // console.log(AnimatableManager);
   }
 
   componentWillUnmount() {
@@ -36,6 +36,6 @@ export default class RootContainer extends React.Component {
   };
 
   render() {
-    return <AppContainer />;
+    return <Router />;
   }
 }
