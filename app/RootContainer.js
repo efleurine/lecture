@@ -4,7 +4,7 @@ import { AnimatableManager } from "react-native-ui-lib";
 import * as Animatable from "react-native-animatable";
 // import RNLanguages from "react-native-languages"; // will allow to know when the user change the languages
 
-import { Router } from "./routes";
+import { Router, NavigationService } from "./routes";
 
 // IMPORTANT! Make uilib's animations available globally for the app's use (option to pass adittional animation definitions)
 Animatable.initializeRegistryWithDefinitions(
@@ -36,6 +36,12 @@ export default class RootContainer extends React.Component {
   };
 
   render() {
-    return <Router />;
+    return (
+      <Router
+        ref={navigatorRef => {
+          NavigationService.setTopLevelNavigator(navigatorRef);
+        }}
+      />
+    );
   }
 }
