@@ -41,16 +41,20 @@ export default class Home extends React.PureComponent {
     //   />
     // )
   };
+
   state = {
     text: "",
     firstQuery: ""
   };
+
   componentDidMount() {
     SplashScreen.hide();
   }
 
   fblogin = () => {};
+
   fblogout = () => {};
+
   fr = () => {
     console.log("vers le francais");
     i18n.locale = "ht";
@@ -66,6 +70,7 @@ export default class Home extends React.PureComponent {
         </MainContainer> */}
         <View>
           <Text onPress={this.fr}>Vers le français</Text>
+          <Text>Cool</Text>
         </View>
         <View flexG>
           <FirstReadingInvitation />

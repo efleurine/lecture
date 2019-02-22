@@ -51,6 +51,7 @@ module.exports = {
     "react/destructuring-assignment": 0,
     "react/no-multi-comp": [0, { ignoreStateless: true }],
     "default-case": 0,
-    "arrow-body-style": 0
+    "arrow-body-style": 0,
+    "react/display-name": 0
   }
 };

@@ -1,3 +1,4 @@
 import Router from "./router";
+import NavigationService from "./NavigationService";
 
-export { Router };
+export { Router, NavigationService };
