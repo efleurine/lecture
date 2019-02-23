@@ -28,9 +28,9 @@ export default class Onboarding extends React.Component {
 
   componentDidMount() {
     console.log("First time is there");
-    SplashScreen.hide();
     this._checkIn();
   }
+
   render() {
     return <Intro onDone={this._done} />;
   }

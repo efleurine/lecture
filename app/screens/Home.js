@@ -23,7 +23,7 @@ const FirstReadingInvitation = () => (
     <Watermark text="Today is the best day to start reading" />
   </View>
 );
-
+const ButtonSpace = 20;
 export default class Home extends React.PureComponent {
   static navigationOptions = {
     // headerTitle: <LogoTitle />,
@@ -32,14 +32,6 @@ export default class Home extends React.PureComponent {
       margin: 0,
       elevation: 0
     }
-
-    // headerRight: (
-    //   <Button
-    //     onPress={() => alert("This is a button!")}
-    //     title="Info"
-    //     color="#fff"
-    //   />
-    // )
   };
 
   state = {
@@ -47,9 +39,7 @@ export default class Home extends React.PureComponent {
     firstQuery: ""
   };
 
-  componentDidMount() {
-    SplashScreen.hide();
-  }
+  componentDidMount() {}
 
   fblogin = () => {};
 
@@ -59,6 +49,10 @@ export default class Home extends React.PureComponent {
     console.log("vers le francais");
     i18n.locale = "ht";
     this.setState({ fr: "fr" });
+  };
+
+  go = () => {
+    console.log("go");
   };
 
   render() {
@@ -73,7 +67,17 @@ export default class Home extends React.PureComponent {
           <Text>Cool</Text>
         </View>
         <View flexG>
-          <FirstReadingInvitation />
+          {/* <AudioExemple /> */}
+          <Button
+            backgroundColor="#30B650"
+            label="SHUFFLE PLAY"
+            labelStyle={{ fontWeight: "600" }}
+            style={{ marginBottom: ButtonSpace }}
+            enableShadow
+            onPress={this.go}
+          />
+
+          {/* <FirstReadingInvitation /> */}
         </View>
       </View>
     );

@@ -1,11 +1,8 @@
 import React from "react";
 import { View, Text } from "react-native-ui-lib";
-import SplashScreen from "react-native-splash-screen";
+// import SplashScreen from "react-native-splash-screen";
 
 export default class UIlib extends React.Component {
-  componentDidMount() {
-    SplashScreen.hide();
-  }
   render() {
     return (
       <View>
