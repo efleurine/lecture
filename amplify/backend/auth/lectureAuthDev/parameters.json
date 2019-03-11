@@ -1,0 +1,74 @@
+{
+    "identityPoolName": "lectureAuthDevIdentityPool",
+    "allowUnauthenticatedIdentities": true,
+    "thirdPartyAuth": true,
+    "lambdaLogPolicy": "lectureAuthDev_lambda_log_policy",
+    "openIdLambdaRoleName": "lectureAuthDev_openid_lambda_role",
+    "openIdRolePolicy": "lectureAuthDev_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "lectureAuthDev_openid_lambda_iam_policy",
+    "openIdLogPolicy": "lectureAuthDev_openid_lambda_log_policy",
+    "userPoolName": "lectureAuthUserPool",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OPTIONAL",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "roleName": "lectureAuthDev_sns-role",
+    "roleExternalId": "lectureAuthDev_role_external_id",
+    "policyName": "lectureAuthDev-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": true,
+    "passwordPolicyMinLength": "8",
+    "passwordPolicyCharacters": [
+        "Requires Lowercase",
+        "Requires Uppercase",
+        "Requires Numbers"
+    ],
+    "requiredAttributes": [
+        "email"
+    ],
+    "userpoolClientName": "lectureAuthDev_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "mfaLambdaRole": "lectureAuthDev_totp_lambda_role",
+    "mfaLambdaLogPolicy": "lectureAuthDev_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "lectureAuthDev_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "lectureAuthDev_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "lectureAuthDev_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "lectureAuthDev_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "lectureAuthDev_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": false,
+    "useDefault": "manual",
+    "authSelections": "identityPoolAndUserPool",
+    "resourceName": "lectureAuthDev",
+    "authProviders": [
+        "graph.facebook.com"
+    ],
+    "selectedParties": "{\"graph.facebook.com\":\"277818926179548\"}",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    }
+}

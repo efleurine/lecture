@@ -1,1 +1,8 @@
-{}
+{
+	"auth": {
+		"lectureAuthDev": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}
