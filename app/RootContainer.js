@@ -3,8 +3,14 @@ import React from "react";
 import { AnimatableManager } from "react-native-ui-lib";
 import * as Animatable from "react-native-animatable";
 // import RNLanguages from "react-native-languages"; // will allow to know when the user change the languages
-
 import SplashScreen from "react-native-splash-screen";
+import Amplify, { Auth } from 'aws-amplify';
+
+import awsmobile from '../aws-exports';
+Amplify.configure(awsmobile);
+
+
+
 import { Router, NavigationService } from "./routes";
 
 import Placeholder from "./screens/Placeholder";

@@ -1,6 +1,7 @@
 import React from "react";
 
 import { View, TextInput, Text, Button } from "react-native-ui-lib";
+import { withAuthenticator } from "aws-amplify-react-native";
 
 import SplashScreen from "react-native-splash-screen";
 
@@ -24,7 +25,7 @@ const FirstReadingInvitation = () => (
   </View>
 );
 const ButtonSpace = 20;
-export default class Home extends React.PureComponent {
+export class Home extends React.PureComponent {
   static navigationOptions = {
     // headerTitle: <LogoTitle />,
     title: "Home",
@@ -83,3 +84,5 @@ export default class Home extends React.PureComponent {
     );
   }
 }
+
+export default withAuthenticator(Home);

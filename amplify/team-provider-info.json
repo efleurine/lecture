@@ -9,13 +9,6 @@
             "UnauthRoleName": "lecture-20190311184730-unauthRole",
             "StackName": "lecture-20190311184730",
             "StackId": "arn:aws:cloudformation:us-east-1:185045432617:stack/lecture-20190311184730/a8840400-444f-11e9-801c-0a5651437e88"
-        },
-        "categories": {
-            "auth": {
-                "lectureAuthDev": {
-                    "facebookAppId": "277818926179548"
-                }
-            }
         }
     }
 }
