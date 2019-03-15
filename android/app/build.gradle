@@ -102,6 +102,11 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     // buildToolsVersion rootProject.ext.buildToolsVersion
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
         applicationId "com.sakcho.lecture"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -133,8 +138,8 @@ android {
         abi {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
-            universalApk true  // If true, also generate a universal APK
-            include "armeabi-v7a", "x86"
+            universalApk false  // If true, also generate a universal APK
+            include "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
         }
     }
     buildTypes {
@@ -150,7 +155,7 @@ android {
         variant.outputs.each { output ->
             // For each separate APK per architecture, set a unique version code as described here:
             // http://tools.android.com/tech-docs/new-build-system/user-guide/apk-splits
-            def versionCodes = ["armeabi-v7a":1, "x86":2]
+            def versionCodes = ["armeabi-v7a":1, "x86":2, "arm64-v8a": 3, "x86_64": 4]
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
                 output.versionCodeOverride =
@@ -166,9 +171,9 @@ configurations.all {
         if (requested.group == 'com.android.support' && requested.name != 'multidex') {
             details.useVersion "${rootProject.ext.supportLibVersion}"
         }
-        if (details.requested.name == 'android-jsc') {
-            details.useTarget group: details.requested.group, name: 'android-jsc', version: 'r236355'
-        }
+        // if (details.requested.name == 'android-jsc') {
+        //     details.useTarget group: details.requested.group, name: 'android-jsc', version: 'r236355'
+        // }
     }
     
 }
