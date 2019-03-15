@@ -6,8 +6,8 @@ import com.facebook.react.ReactApplication;
 import com.amazonaws.RNAWSCognitoPackage;
 
 import com.cmcewen.blurview.BlurViewPackage;
-import com.zmxv.RNSound.RNSoundPackage;
-import com.rnim.rn.audio.ReactNativeAudioPackage;
+// import com.zmxv.RNSound.RNSoundPackage;
+// import com.rnim.rn.audio.ReactNativeAudioPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.microsoft.appcenter.reactnative.crashes.AppCenterReactNativeCrashesPackage;
 import com.microsoft.appcenter.reactnative.analytics.AppCenterReactNativeAnalyticsPackage;
@@ -54,10 +54,8 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(new MainReactPackage(),
-            new RNAWSCognitoPackage(),
-          new BlurViewPackage(), new RNSoundPackage(),
-          new ReactNativeAudioPackage(), new RNGestureHandlerPackage(),
+      return Arrays.<ReactPackage>asList(new MainReactPackage(), new RNAWSCognitoPackage(), new BlurViewPackage(),
+          new RNGestureHandlerPackage(),
           new AppCenterReactNativeCrashesPackage(MainApplication.this,
               getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
           new AppCenterReactNativeAnalyticsPackage(MainApplication.this,

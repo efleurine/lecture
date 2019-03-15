@@ -116,6 +116,8 @@ android {
         // ndk {
         //     abiFilters "armeabi-v7a", "x86"
         // }
+        renderscriptTargetApi 23
+        renderscriptSupportModeEnabled true
     }
     signingConfigs {
         release {
@@ -183,8 +185,8 @@ dependencies {
     implementation project(':appcenter-crashes')
     implementation project(':appcenter-analytics')
     implementation project(':appcenter')
-    implementation project(':react-native-sound')
-    implementation project(':react-native-audio')
+    // implementation project(':react-native-sound')
+    // implementation project(':react-native-audio')
     implementation project(':react-native-gesture-handler')
     implementation project(':react-native-splash-screen')
 
