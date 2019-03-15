@@ -181,6 +181,7 @@ configurations.all {
 }
 
 dependencies {
+    implementation project(':react-native-reanimated')
     implementation project(':amazon-cognito-identity-js')
     implementation project(':appcenter-crashes')
     implementation project(':appcenter-analytics')

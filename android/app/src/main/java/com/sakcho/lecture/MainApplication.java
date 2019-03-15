@@ -3,6 +3,7 @@ package com.sakcho.lecture;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.swmansion.reanimated.ReanimatedPackage;
 import com.amazonaws.RNAWSCognitoPackage;
 
 import com.cmcewen.blurview.BlurViewPackage;
@@ -54,7 +55,8 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(new MainReactPackage(), new RNAWSCognitoPackage(), new BlurViewPackage(),
+      return Arrays.<ReactPackage>asList(new MainReactPackage(),
+            new ReanimatedPackage(), new RNAWSCognitoPackage(), new BlurViewPackage(),
           new RNGestureHandlerPackage(),
           new AppCenterReactNativeCrashesPackage(MainApplication.this,
               getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
